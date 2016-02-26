@@ -10,10 +10,14 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'httparty'
 gem 'globalize', '~> 5.0.0'
+gem 'bcrypt'
 
 group :development, :test do
   gem 'pry'
   gem 'quiet_assets'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'faker'
 end
 
 group :development do
