@@ -19,7 +19,7 @@ module Hearthstown
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     config.i18n.default_locale = :enUS
-    config.i18n.available_locales = %w(deDE enGB enUS esES esMX frFR itIT koKR plPL ptBR ruRU zhCN zhTW jaJP)
+    config.i18n.available_locales = %w(en deDE enGB enUS esES esMX frFR itIT koKR plPL ptBR ruRU zhCN zhTW jaJP)
     config.autoload_paths += %W(#{config.root}/lib)
 
 

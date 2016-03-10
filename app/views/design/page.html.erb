@@ -1,28 +1,32 @@
-<div class='header'>
-  <div class='logo'>
-    <div>
-      <div class='hearthst'>
-        HearthSt
-      </div>
-      <div class='your'>
-        Your
-      </div>
-    </div>
-    <div class='own'>OWN</div>
-    <div>
-      <div class='tierlist'>tier list</div>
-    </div>
+<div class="container-fluid">
+  <%= render 'design/header.erb' %>
+    <%#<svg>%>
+      <%#<text x="0" y="15">Hearthst</text>%>
+    <%#</svg>%>
+    <%#<div class='logo'>%>
+      <%#<div>%>
+        <%#<div class='hearthst'>%>
+          <%#HearthSt%>
+        <%#</div>%>
+        <%#<div class='your'>%>
+          <%#Your%>
+        <%#</div>%>
+      <%#</div>%>
+      <%#<div class='own'>OWN</div>%>
+      <%#<div>%>
+        <%#<div class='tierlist'>tier list</div>%>
+      <%#</div>%>
+    <%#</div>%>
+    <%#<div class='navigation'>%>
+      <%#<ul>%>
+        <%#<li>My tier list</li>%>
+        <%#<li>All tier lists</li>%>
+      <%#</ul>%>
+    <%#</div>%>
+  <div class='content'>
+    Here comes content
+    <% Hero.where(code: 'mage').first.cards.legendary.all.each do |card| %>
+      <%= image_tag card.gold_image_url %>
+    <% end %>
   </div>
-  <div class='navigation'>
-    <ul>
-      <li>My tier list</li>
-      <li>All tier lists</li>
-    </ul>
-  </div>
-</div>
-<div class='content'>
-  Here comes content
-  <% Hero.where(code: 'mage').first.cards.legendary.all.each do |card| %>
-    <%= image_tag card.gold_image_url %>
-  <% end %>
 </div>
